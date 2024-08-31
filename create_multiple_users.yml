@@ -1,0 +1,14 @@
+---
+- name: My Test Playbook
+  hosts: all
+  become: true
+  tasks:
+  - name: create multiple users
+    user:
+      name: "{{item}}"
+      state: present
+    with_items:
+        - Krishna
+        - Gopal
+        - Vishnu
+

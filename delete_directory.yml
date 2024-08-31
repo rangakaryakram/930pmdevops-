@@ -1,0 +1,9 @@
+---
+- name: My Test Playbook
+  hosts: all
+  become: true
+  tasks: 
+  - name: delete directory 
+    file:
+      name: demodir
+      state: absent
